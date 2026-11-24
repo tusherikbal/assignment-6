@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
+import { FitLogProvider } from "@/context/FitlogContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,9 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${oswald.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col bg-[#0a0a0a] text-white font-sans antialiased" suppressHydrationWarning>
-        {children}
-      </body>
+     <body className="min-h-screen flex flex-col bg-[#0a0a0a] text-white font-sans antialiased" suppressHydrationWarning>
+  <FitLogProvider>{children}</FitLogProvider>
+</body>
     </html>
   );
 }

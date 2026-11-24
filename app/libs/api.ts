@@ -1,4 +1,4 @@
-import { Workout } from "@/types/workout";
+import { Workout } from "@/app/types/workout";
 
 const PRIMARY_API = "https://api.abcz.workers.dev/api/fitlog";
 const FALLBACK_API = "https://api.api-store.workers.dev/api/fitlog";
